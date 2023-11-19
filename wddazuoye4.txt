@@ -1,0 +1,17 @@
+private slots:
+    void chessOneByAI();
+    void initGame();
+    void initAIGame();
+    void initManGame();
+    void initAIAIGame();
+    void initSERVERGame();
+    void initCLIENTGame();
+    void initBLACKGame();
+    void initWHITEGame();
+    void initchange();
+    void initback();
+    void newconnection();
+    void readyread();
+};
+
+#endif // MAINWINDOW_H
