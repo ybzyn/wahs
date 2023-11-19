@@ -1,0 +1,23 @@
+28248@▒▒▒▒ MINGW64 ~/Desktop/wahs (master)
+$ git marge main
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+28248@▒▒▒▒ MINGW64 ~/Desktop/wahs (master)
+$ git marge 000
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+28248@▒▒▒▒ MINGW64 ~/Desktop/wahs (master)
+$ git merge main
+merge: main - not something we can merge
+
+28248@▒▒▒▒ MINGW64 ~/Desktop/wahs (master)
+$ git merge 000
+merge: 000 - not something we can merge
+
+28248@▒▒▒▒ MINGW64 ~/Desktop/wahs (master)
