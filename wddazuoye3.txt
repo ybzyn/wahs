@@ -1,0 +1,56 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QPushButton>
+#include <QtNetwork>
+#include <qbytearray.h>
+#include "GameModel.h"
+
+
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
+
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
+    QTcpServer *sever;
+    QTcpSocket *client;
+    QPushButton *AI_button;
+    QPushButton *MAN_button;
+    QPushButton *AIAI_button;
+    QPushButton *SERVER_button;
+    QPushButton *CLIENT_button;
+    QPushButton *WHITE_button;
+    QPushButton *BLACK_button;
+    QPushButton *back_button;
+    QPushButton *change_button;
+    GameModel *game;//游戏指针
+    GameType game_type;//存储游戏类型
+    static int valid_paint;
+    static int change_paint;
+
+    bool play_valid;
+    int clickPosRow,clickPosCol;//存储将点击的位置
+    bool selectPos = false;//是否移动到合适的位置，以选中每个交叉点
+
+    //绘制
+    void paintEvent(QPaintEvent *event);
+
+    //鼠标移动监测
+    void mouseMoveEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+
+    void chessOneByPerson();
+
+    bool check();
